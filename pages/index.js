@@ -26,20 +26,20 @@ export default function Home() {
             <div>
               <ul className="flex space-x-10">
                 {
-                  tabs.map((x, index) => <li key={index} className="font-medium text-gray-400 hover:text-black uppercase hover:border-b-4 hover:border-black">{x}</li>)
+                  tabs.map((x, index) => <li key={index} className="font-medium cursor-pointer text-gray-400 hover:text-black uppercase hover:border-b-4 hover:border-black">{x}</li>)
                 }
               </ul>
             </div>
             <div className="flex space-x-3">
-              <div className="flex items-center justify-center bg-green-600 w-7 h-7 rounded-full">
+              <button className="flex items-center justify-center bg-green-600 w-7 h-7 rounded-full">
                 <ChevronLeftIcon className="text-white h-5" />
-              </div>
-              <div className="flex items-center justify-center bg-green-600 w-7 h-7 rounded-full">
+              </button>
+              <button className="flex items-center justify-center bg-green-600 w-7 h-7 rounded-full">
                 <ChevronRightIcon className="text-white h-5" />
-              </div>
+              </button>
             </div>
           </div>
-          <section className="grid grid-cols-4 gap-5">
+          <section className="flex gap-5">
             <AlbumCard album={{title: 'album mode', num_of_songs: 20}} />
             <AlbumCard album={{title: 'another album', num_of_songs: 20}} />
             <AlbumCard album={{title: 'title 4', num_of_songs: 20}} />

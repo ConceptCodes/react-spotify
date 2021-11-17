@@ -7,7 +7,7 @@ export default function queue() {
       <h1 className="text-lg text-gray-600">Playlist Name</h1>
       <ul className="overscroll-auto overflow-y-auto">
         {[...Array(6)].map((x,index) => (
-          <li key={index} className="group flex items-center justify-between p-2 hover:bg-white">
+          <li key={index} className="group cursor-pointer flex items-center justify-between p-2 hover:bg-white">
             <div className="flex items-center justify-center space-y-5 space-x-3">
               <h1 className="group-hover:text-green-600 text-gray-500">0{index}.</h1>
               <div className="rounded-full flex h-12 w-12 items-center justify-center text-xl bg-gray-400 text-white group-hover:bg-green-600">
