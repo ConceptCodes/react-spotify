@@ -1,0 +1,40 @@
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+/* Start purging... */
+@tailwind components;
+/* Stop purging. */
+
+/* Write you own custom component styles here */
+
+/* Start purging... */
+@tailwind utilities;
+/* Stop purging. */
+
+/* Your own custom utilities */
+
+@layer components {
+    .footer-icon-btn {
+        @apply h-8 hover:text-green-300 text-gray-400
+    }
+    .tab-btn {
+        @apply font-medium cursor-pointer text-gray-400 focus:text-black uppercase focus:border-b-4 focus:border-black 
+    }
+
+    .mobile-md {
+        @apply hidden md:inline-flex
+    }
+
+    .queue-hover {
+        @apply group-hover:text-green-600
+    }
+
+    .queue-dark-hover {
+        @apply group-hover:text-lime-600
+    }
+
+    .mobile-lg {
+        @apply hidden lg:inline-flex
+    }
+}
