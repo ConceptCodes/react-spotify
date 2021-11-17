@@ -1,82 +1,54 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+import AlbumCard from '../components/card/album'
+import SongCard from "../components/card/song";
+import QueueCard from "../components/card/queue";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
+
+const tabs = ['albums', 'playlist', 'artist', 'genres']
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="">
       <Head>
-        <title>Create Next App</title>
+        <title>Spotify</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <Navbar />
+      <main className="bg-gray-100">
+        <div className="flex h-[400px]">
+          <SongCard />
+          <QueueCard />
         </div>
+        <article className="flex border-t-4 px-10 py-10 flex-col space-y-10">
+          <div className="flex justify-between">
+            <div>
+              <ul className="flex space-x-10">
+                {
+                  tabs.map((x, index) => <li key={index} className="font-medium text-gray-400 hover:text-black uppercase hover:border-b-4 hover:border-black">{x}</li>)
+                }
+              </ul>
+            </div>
+            <div className="flex space-x-3">
+              <div className="flex items-center justify-center bg-green-600 w-7 h-7 rounded-full">
+                <ChevronLeftIcon className="text-white h-5" />
+              </div>
+              <div className="flex items-center justify-center bg-green-600 w-7 h-7 rounded-full">
+                <ChevronRightIcon className="text-white h-5" />
+              </div>
+            </div>
+          </div>
+          <section className="grid grid-cols-4 gap-5">
+            <AlbumCard album={{title: 'album mode', num_of_songs: 20}} />
+            <AlbumCard album={{title: 'another album', num_of_songs: 20}} />
+            <AlbumCard album={{title: 'title 4', num_of_songs: 20}} />
+            <AlbumCard album={{title: 'title 3', num_of_songs: 20}} />
+            <AlbumCard album={{title: 'title 1', num_of_songs: 20}} />
+          </section>
+        </article>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+      <Footer />
     </div>
-  )
+  );
 }
