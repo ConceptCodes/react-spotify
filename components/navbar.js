@@ -5,16 +5,16 @@ import { BellIcon } from '@heroicons/react/outline'
 export default function Navbar() {
   return (
     <header className="flex sticky top-0 dark:bg-gray-900 bg-white z-10 justify-between border-b-2 dark:border-gray-800 p-2 md:px-10">
-      <div className="flex space-x-4">
+      <div className="flex space-x-14">
         <div className="flex items-center space-x-3">
           <div className="flex items-center justify-center bg-green-600 dark:bg-lime-600 rounded-full w-12 h-12">
-            <MusicNoteIcon className="text-white h-6" />
+            <MusicNoteIcon className="text-white h-7" />
           </div>
           <h1 className="dark:text-lime-600 text-xl capitalize font-medium">
             spotify
           </h1>
         </div>
-        <div className="hidden xl:inline-block items-center space-x-3">
+        <div className="mobile-lg items-center space-x-2">
           <SearchIcon className="text-gray-300 dark:text-lime-600 h-6" />
           <h2 className="text-gray-300 dark:text-lime-600 capitalize">search songs...</h2>
         </div>

@@ -17,27 +17,27 @@ export default function Home() {
       </Head>
       <Navbar />
       <main className="">
-        <div className="flex flex-col xl:flex-row">
+        <div className="flex flex-col lg:flex-row lg:justify-between">
           <SongCard />
           <QueueCard />
         </div>
-        <article className="flex border-t-4 border-gray-300 space-y-10 px-10 py-10 flex-col">
+        <article className="flex border-t-4 border-gray-300 dark:border-gray-700 space-y-10 px-5 md:px-10 py-10 flex-col">
           <div className="flex justify-between">
-            <ul className="flex space-x-10">
+            <ul className="flex space-x-5 md:space-x-10">
               {
                 tabs.map((x, index) => <button key={index} className="tab-btn">{x}</button>)
               }
             </ul>
             <div className="mobile-md space-x-3">
-              <button className="flex items-center justify-center bg-green-600 w-7 h-7 rounded-full">
+              <button className="flex items-center justify-center bg-green-600 dark:bg-lime-600 w-7 h-7 rounded-full">
                 <ChevronLeftIcon className="text-white h-5" />
               </button>
-              <button className="mobile-md items-center justify-center bg-green-600 w-7 h-7 rounded-full">
+              <button className="mobile-md items-center justify-center bg-green-600 dark:bg-lime-600 w-7 h-7 rounded-full">
                 <ChevronRightIcon className="text-white h-5" />
               </button>
             </div>
           </div>
-          <section className="flex flex-row overscroll-auto overflow-x-auto gap-5">
+          <section className="flex overscroll-auto overflow-x-auto gap-5">
             <AlbumCard album={{title: 'album mode', num_of_songs: 20}} />
             <AlbumCard album={{title: 'another album', num_of_songs: 20}} />
             <AlbumCard album={{title: 'title 4', num_of_songs: 20}} />

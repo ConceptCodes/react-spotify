@@ -9,7 +9,7 @@ export default function album({ album }) {
                 <PlayIcon className="text-green-500" />
             </div> */}
             <img src="https://via.placeholder.com/200" className="rounded-t-xl" width="300" height="100" />
-            <article className="bg-white p-3 py-5 rounded-b-xl">
+            <article className="bg-white dark:bg-gray-900 dark:text-lime-600 p-3 py-5 rounded-b-xl">
                 <h1>{title}</h1>
                 <p className="text-gray-400">{num_of_songs} Songs</p>
             </article>

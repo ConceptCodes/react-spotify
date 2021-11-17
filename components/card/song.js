@@ -3,7 +3,7 @@ import { PlayIcon } from '@heroicons/react/outline'
 
 export default function song() {
     return (
-        <article className="flex flex-col items-center md:flex-row p-10 md:space-x-10 border-b-4 xl:border-r-4 border-gray-300">
+        <article className="flex flex-col items-center justify-center xl:flex-row p-10 xl:space-x-10 border-b-4 lg:border-b-0 dark:border-gray-700">
             <div className="max-h-xl hidden-mobile">
                 <Image className="rounded-xl" src="https://via.placeholder.com/200" width={250} height={250} alt="image title" />
             </div>

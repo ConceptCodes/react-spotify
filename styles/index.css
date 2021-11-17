@@ -19,7 +19,7 @@
         @apply h-8 hover:text-green-300 text-gray-400
     }
     .tab-btn {
-        @apply font-medium cursor-pointer text-gray-400 focus:text-black uppercase focus:border-b-4 focus:border-black 
+        @apply font-medium cursor-pointer text-gray-400 focus:text-black uppercase focus:border-b-4 focus:border-black dark:focus:text-lime-600 dark:focus:border-lime-600
     }
 
     .mobile-md {
@@ -27,11 +27,7 @@
     }
 
     .queue-hover {
-        @apply group-hover:text-green-600
-    }
-
-    .queue-dark-hover {
-        @apply group-hover:text-lime-600
+        @apply group-hover:text-green-600 dark:group-hover:text-lime-600
     }
 
     .mobile-lg {
